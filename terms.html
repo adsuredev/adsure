@@ -22,10 +22,39 @@
 </head>
 <body>
 
-<header class="nav">
+<header class="nav" id="nav">
   <div class="wrap nav-in">
     <a class="nav-logo" href="/" aria-label="AdSure home"><img src="/assets/logo-dark.png" alt="AdSure" width="440" height="96"></a>
-    <a class="btn" href="/#join">Get early access</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/features">Features</a>
+      <a href="/why-adsure">Why AdSure</a>
+      <a href="/pricing">Price</a>
+      <a href="/faq">FAQ</a>
+      <a href="/guides">Guides</a>
+      <a href="/heatmap">Free heatmap</a>
+    </nav>
+    <div class="nav-end">
+      <a class="btn btn-ink" href="/#join">Get early access</a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <svg class="i-bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="menu" id="menu" hidden>
+    <nav class="wrap" aria-label="Menu">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/features">Features</a></li>
+        <li><a href="/why-adsure">Why AdSure</a></li>
+        <li><a href="/pricing">Price</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/guides">Guides</a></li>
+        <li><a href="/heatmap">Free heatmap</a></li>
+      </ul>
+      <a class="btn btn-lime" href="/#join">Get early access</a>
+      <p class="menu-contact">Questions? <a href="https://wa.me/917607492323" target="_blank" rel="noopener">WhatsApp <span class="nowrap">+91 76074 92323</span></a></p>
+    </nav>
   </div>
 </header>
 
@@ -98,6 +127,7 @@
             <li>You pay in advance through our payment partner Razorpay. A monthly plan renews every month and a yearly plan renews every year, until you cancel.</li>
             <li>Monthly limits, like 5 full expert reviews a month, reset every month, on yearly plans too. Unused reviews don't carry over, unless we say otherwise.</li>
             <li>Expert calls are paid for separately when you book them: ₹1,499 for 30 minutes and ₹2,599 for 60 minutes.</li>
+            <li>Free expert calls: a yearly plan includes one free 60-minute expert call in each quarter of the plan year. A monthly plan includes one free 60-minute expert call after every 6 monthly payments in a row. Free calls are booked like paid calls and follow the same rescheduling rules.</li>
             <li>If we change the price of your plan, we will tell you at least 30 days before. The new price applies from your next renewal after that, and you can cancel before it does.</li>
             <li>If a payment fails, we may pause paid features until it goes through.</li>
           </ul>
@@ -207,5 +237,6 @@
     </div>
   </div>
 </footer>
+<script src="/assets/nav.js?v=1"></script>
 </body>
 </html>
