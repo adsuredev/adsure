@@ -8,7 +8,9 @@ window.ADSURE_CONFIG = {
   SUPABASE_ANON_KEY: "sb_publishable_Osib6-_IbK-Wi5Xs8OOlng_9s-z4S4h",   // publishable key, NOT the secret key
 
   TOTAL_SEATS: 500,
-  PRICE: 1599,                   // ₹ per month for founding members
+  PRICE: 2999,                   // ₹ per month, before GST
+  YEARLY_PRICE: 19999,           // ₹ per year, before GST
+  GST_PERCENT: 18,               // added on top of the prices above
   REGULAR_PRICE: null,           // e.g. 2499, ONLY if that will really be your later price
 
   // Videos: people switch between them with the buttons next to the player.
@@ -20,7 +22,7 @@ window.ADSURE_CONFIG = {
       text: "Priya runs ads and gets nothing, until she checks them first.",
       file: "assets/adsure-explainer.mp4",
       youtube: "",
-      poster: ""                 // optional cover image, e.g. "assets/poster-1.jpg"
+      poster: "assets/explainer-poster.webp"   // optional cover image
     },
     {
       title: "Rohan's story",
