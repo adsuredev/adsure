@@ -130,3 +130,9 @@ If any of these change, search all .html files for the old value.
 
 Each guide has an "Updated" date and a Sources list. The festival calendar and the ad rules guide go out of date:
 check the dates once a year and the rules every few months (the gaming law is in the Supreme Court).
+
+## Prices
+
+Set in config.js: PRICE (monthly, ₹2,999), YEARLY_PRICE (₹19,999) and GST_PERCENT (18). The price card, GST totals,
+per-day cost, yearly saving and calculators all update from these. The same numbers are also written in the page text
+and the Terms and Refund pages, so after a price change search all .html files for the old number too.

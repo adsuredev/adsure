@@ -21,15 +21,34 @@ const $ = s => document.querySelector(s);
 const $$ = s => Array.from(document.querySelectorAll(s));
 const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-/* ---- price ---- */
+/* ---- price: every number comes from config.js (PRICE, YEARLY_PRICE, GST_PERCENT) ---- */
 (function price(){
-  const perDay = CONFIG.PRICE / 30;
-  $$("[data-price]").forEach(e => e.textContent = inr(CONFIG.PRICE));
-  $$("[data-perday]").forEach(e => e.textContent = "₹" + Math.floor(perDay));
-  $$("[data-perday-exact]").forEach(e => e.textContent = perDay.toFixed(2));
-  if (CONFIG.REGULAR_PRICE) { const r = $("#regular-price"); r.textContent = inr(CONFIG.REGULAR_PRICE); r.hidden = false; }
-  const wp = $("#w-price"); if (wp) wp.textContent = inr(CONFIG.PRICE);
+  const m = Number(CONFIG.PRICE) || 2999, y = Number(CONFIG.YEARLY_PRICE) || 19999, gst = (Number(CONFIG.GST_PERCENT) || 18) / 100;
+  const perDay = y / 365;
+  const set = (sel, v) => $$(sel).forEach(e => e.textContent = v);
+  set("[data-price]", inr(m));
+  set("[data-price-year]", inr(y));
+  set("[data-price-gst]", inr(m * (1 + gst)));
+  set("[data-year-gst]", inr(y * (1 + gst)));
+  set("[data-year-month]", inr(y / 12));
+  set("[data-year-save]", inr(Math.max(0, m * 12 - y)));
+  set("[data-save-pct]", Math.round((1 - y / (m * 12)) * 100) + "%");
+  set("[data-perday]", "₹" + Math.round(perDay));
+  set("[data-perday-exact]", perDay.toFixed(2));
+  if (CONFIG.REGULAR_PRICE) { const r = $("#regular-price"); if (r) { r.textContent = inr(CONFIG.REGULAR_PRICE); r.hidden = false; } }
+  const wp = $("#w-price"); if (wp) wp.textContent = inr(m);
   const yr = $("#yr"); if (yr) yr.textContent = new Date().getFullYear();
+})();
+
+/* ---- monthly / yearly switch on the price card ---- */
+(function billing(){
+  const btns = $$(".bill-btn"); if (!btns.length) return;
+  const show = which => {
+    btns.forEach(b => b.setAttribute("aria-pressed", b.dataset.bill === which));
+    $$(".bill-month").forEach(e => e.hidden = which !== "month");
+    $$(".bill-year").forEach(e => e.hidden = which !== "year");
+  };
+  btns.forEach(b => b.addEventListener("click", () => show(b.dataset.bill)));
 })();
 
 /* ---- table marks ---- */
@@ -46,6 +65,12 @@ const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
     td.innerHTML = `<span class="mk ${cls[k]}">${svg[k]}${k === "p" ? "Partly" : `<span class="sr">${label[k]}</span>`}</span>`;
   });
 })();
+
+/* ---- tables: give every cell its column name, so on phones each row can show as a card ---- */
+$$(".tbl-wrap table").forEach(t => {
+  const heads = Array.from(t.querySelectorAll("thead th")).map(th => th.textContent.trim().replace(/'s (suggestions|recommendations)$/, ""));
+  t.querySelectorAll("tbody tr").forEach(tr => Array.from(tr.children).forEach((c, i) => { if (c.tagName === "TD" && heads[i]) c.dataset.label = heads[i]; }));
+});
 
 /* ---- score rings ---- */
 function fillRing(ring){
@@ -169,19 +194,19 @@ let shownTaken = 0, taken = 0;
 
 /* The live seat count is not in the page source at all. It is written in only once
    SHOW_SEATS_FROM real people have joined, so no one (and no AI or search crawler reading
-   the page) sees "0 of 500 taken" on an early page. Until then the "Founding price" text shows. */
+   the page) sees "0 of 500 taken" on an early page. Until then nothing about seats is shown. */
 const SEAT_TPL = {
   hero: ' <b><span data-seats-left></span> seats left</b>',
   pricing: '<div class="seats-top"><span class="live-dot" aria-hidden="true"></span>Live seat count</div>'
     + '<p class="seat-count"><span data-seats-taken></span><small> / <span data-seats-total></span> taken</small></p>'
     + '<div class="meter" role="progressbar" aria-label="Beta seats taken" aria-valuemin="0" aria-valuenow="0"><i id="meter-fill"></i></div>'
-    + '<p class="seat-left"><span data-seats-left></span> founding seats left</p>'
-    + '<p>This number updates on its own as people join. When all founding seats are taken, new sign-ups go on the waitlist.</p>'
+    + '<p class="seat-left"><span data-seats-left></span> beta seats left</p>'
+    + '<p>This number updates on its own as people join. When all beta seats are taken, new sign-ups go on the waitlist.</p>'
     + '<div class="ticket" id="ticket" aria-hidden="true"></div>',
   fine: '<span data-seats-left></span> of <span data-seats-total></span> seats left at',
-  final: '<span data-seats-left></span> founding seats left',
+  final: '<span data-seats-left></span> beta seats left',
   pop: '<p class="pop-live"><span class="live-dot" aria-hidden="true"></span>Live seat count</p>'
-    + '<p class="pop-big"><span data-seats-left></span><small>founding seats left of <span data-seats-total></span></small></p>'
+    + '<p class="pop-big"><span data-seats-left></span><small>beta seats left of <span data-seats-total></span></small></p>'
     + '<div class="pop-meter" aria-hidden="true"><i id="pop-meter"></i></div>',
   mcta: '<span data-seats-left></span> seats left'
 };
@@ -223,7 +248,7 @@ function renderSeats(target){
 }
 function setFull(){
   const sb = $("#submit-btn"); if (sb) sb.textContent = "Join the waitlist";
-  $$(".price-tag").forEach(e => e.textContent = "All 500 founding seats are taken");
+  $$(".price-tag").forEach(e => e.textContent = "All beta seats are taken");
   const pt = $("#pop-title"); if (pt) pt.textContent = "Join the waitlist";
   const pb = $("#pop-btn"); if (pb) pb.textContent = "Join the waitlist";
 }
@@ -324,7 +349,7 @@ function markJoined(position){
   $("#done").classList.add("show");
   if (inBeta) {
     $("#done-title").textContent = "Your seat is saved";
-    $("#done-seat").textContent = `You're founding member #${position.toLocaleString("en-IN")} of ${CONFIG.TOTAL_SEATS}`;
+    $("#done-seat").textContent = `You're beta member #${position.toLocaleString("en-IN")} of ${CONFIG.TOTAL_SEATS}`;
   } else if (position > CONFIG.TOTAL_SEATS) {
     $("#done-title").textContent = "You're on the waitlist";
     $("#done-text").textContent = "All 500 beta seats are taken. We'll reach out as soon as a spot opens.";
@@ -573,7 +598,7 @@ if (form) form.addEventListener("submit", async e => {
       } else {
         await fetchSeats();
         const inBeta = markJoined(taken);
-        if (inBeta) $("#pop-done-seat").textContent = `You're founding member #${taken.toLocaleString("en-IN")} of ${CONFIG.TOTAL_SEATS}`;
+        if (inBeta) $("#pop-done-seat").textContent = `You're beta member #${taken.toLocaleString("en-IN")} of ${CONFIG.TOTAL_SEATS}`;
         else if (taken > CONFIG.TOTAL_SEATS) { $("#pop-done-title").textContent = "You're on the waitlist"; $("#pop-done-text").textContent = "All 500 beta seats are taken. We'll reach out as soon as a spot opens."; }
       }
       $("#pop-done").querySelector("button").focus();

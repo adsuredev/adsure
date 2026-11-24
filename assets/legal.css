@@ -71,3 +71,5 @@ footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
 .legal{margin-top:40px;padding-top:20px;border-top:1px solid var(--ink-3);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.85rem}
 @media (max-width:760px){.foot-grid{grid-template-columns:1fr}}
 @media print{.nav,.toc,footer{display:none}.doc{display:block}body{background:#fff}}
+
+.nowrap{white-space:nowrap}
