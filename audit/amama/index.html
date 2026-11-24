@@ -1,135 +1,137 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
-<title>Amama ad review</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-/* VOICE  direct, friendly, expert: a reviewer's notes, not a sales pitch
-   IDEA   an editor's marked-up proof of the brand's own live ad
-   PICTURE their ad as a feed post, with lime highlights and numbered pins tied to the notes
-   COLOUR AdSure cream ground, near-black ink, lime accent; red only for critical
-   TYPE   Hanken Grotesk display + Inter text
-   LAYOUT laptop: score and fix-first list left, marked-up ad right; phone: score, ad, notes */
-:root{color-scheme:light;--bg:#f5f2e9;--ink:#141412;--mute:#5d5b55;--line:#dcd7c9;--card:#fff;--lime:#c9f23d;--lime2:#e9fbb0;--red:#d93a2e;--amber:#b86e00}
+<title>Amama ad review | AdSure</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>/* VOICE  a friendly expert sending a gift: short pointers, no scores, no jargon
+   IDEA   a creative review board: their ad, our version, a winner, side by side like proofs on a wall
+   PICTURE the real ads in phone frames, with our rewrite set as a ready-to-run ad card
+   COLOUR AdSure cream ground, near-black ink, lime for actions and good points; dark band for AdSure itself
+   TYPE   Hanken Grotesk headings + Inter text
+   LAYOUT each step: phone frame left, pointers right; stacks to frame-then-pointers on phones */
+:root{color-scheme:light;--bg:#f5f2e9;--ink:#141412;--mute:#5d5b55;--line:#dcd7c9;--card:#fff;--lime:#c9f23d;--lime2:#eefbc4;--tint:#ece8dc}
 *{box-sizing:border-box;min-width:0}
 html,body{margin:0;background:var(--bg);color:var(--ink)}
 body{font:16px/1.55 Inter,system-ui,sans-serif;overflow-x:clip}
 a{color:inherit}
-h1,h2,h3{font-family:"Hanken Grotesk",Inter,sans-serif;letter-spacing:-.02em;line-height:1.08;margin:0}
-.wrap{max-width:1180px;margin:0 auto;padding:0 max(5vw,16px)}
-header{border-bottom:1px solid var(--line)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px;flex-wrap:wrap}
-.logo{height:30px;width:auto;display:block}
-.when{color:var(--mute);font-size:14px}
-.first{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(24px,4vw,56px);padding-block:clamp(28px,4vw,56px)}
-.for{font-size:15px;color:var(--mute);margin-bottom:10px}
-h1{font-size:clamp(32px,4.4vw,48px);text-wrap:balance}
-.score{display:flex;align-items:flex-end;gap:16px;margin:24px 0 8px;flex-wrap:wrap}
-.num{font:700 clamp(72px,10vw,112px)/.9 "Hanken Grotesk",sans-serif;letter-spacing:-.04em}
-.num small{font-size:.32em;color:var(--mute);letter-spacing:0;margin-left:4px}
-.verdict{font-size:18px;font-weight:600;max-width:22em;padding-bottom:10px}
-.meter{height:12px;background:var(--line);border-radius:6px;overflow:hidden;margin:6px 0 4px}
-.meter i{display:block;height:100%;background:var(--ink)}
-.meter.ok i{background:#5f8f00}
-.scale{display:flex;justify-content:space-between;font-size:13px;color:var(--mute)}
-.fixfirst{margin-top:28px}
-.fixfirst h2{font-size:22px;margin-bottom:12px}
-.fixfirst ol{margin:0;padding:0;list-style:none;display:grid;gap:10px}
-.fixfirst li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:12px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
-.n{width:28px;height:28px;border-radius:50%;background:var(--lime);display:grid;place-items:center;font:700 14px Inter,sans-serif}
-.fixfirst b{display:block}
-.fixfirst span{color:var(--mute);font-size:15px}
-.post{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 1px 0 var(--line);overflow:hidden;align-self:start}
-.ph{display:flex;align-items:center;gap:12px;padding:16px 18px 8px}
+h1,h2{font-family:"Hanken Grotesk",Inter,sans-serif;letter-spacing:-.02em;line-height:1.08;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding:0 max(5vw,16px)}
+.top{border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:14px;flex-wrap:wrap;font-size:14px;color:var(--mute)}
+.logo{display:block;height:28px;width:auto}
+.hero .wrap{padding-block:clamp(28px,5vw,56px)}
+h1{font-size:clamp(32px,4.6vw,50px);max-width:16em;text-wrap:balance}
+.hero-pts{list-style:none;padding:0;margin:18px 0 24px;display:flex;flex-wrap:wrap;gap:8px 10px}
+.hero-pts li{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:6px 14px;font-size:15px}
+.btn{display:inline-block;padding:14px 22px;border-radius:12px;font-weight:700;text-decoration:none;text-align:center}
+.btn.lime{background:var(--lime);color:var(--ink)}
+.btn.line{border:1px solid #57554f;color:#f5f2e9}
+.btn.ghost{background:#e4e1d6;padding:9px 14px;font-size:14px;white-space:nowrap}
+.blk{padding-block:clamp(32px,5vw,60px);border-top:1px solid var(--line)}
+.blk.tint{background:var(--tint)}
+.two{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:start}
+.step{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--ink);color:var(--lime);font-weight:700;margin-bottom:10px}
+h2{font-size:clamp(26px,3vw,36px)}
+.meta{color:var(--mute);margin:8px 0 14px;font-size:15px}
+.note{margin:0 0 10px;font-size:15px}
+.pts{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.pts li{position:relative;padding:12px 14px 12px 44px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.pts li::before{content:"→";position:absolute;left:14px;top:12px;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:700;background:#ffe1c7;color:#7a3a00}
+.pts li.good::before{content:"✓";background:var(--lime);color:var(--ink)}
+.pts.light li{background:#1f1e1b;border-color:#33322e;color:#f1eee5}
+.borrow{background:var(--lime2);border-radius:12px;padding:12px 14px;margin:14px 0 0}
+.small{display:inline-block;margin-top:14px;font-size:14px;color:var(--mute)}
+details{margin-top:14px;font-size:15px}
+summary{cursor:pointer;color:var(--mute)}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;font:15px/1.6 Inter,sans-serif;margin:10px 0 0}
+details pre{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.phone{margin:0;background:#111;border-radius:28px;padding:10px;box-shadow:0 1px 0 var(--line);position:relative;align-self:start}
+.phone video{display:block;width:100%;max-height:620px;border-radius:20px;background:#000}
+.phone .snap{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:8px;border-radius:20px}
+.phone .snap img{flex:0 0 100%;width:100%;scroll-snap-align:start;border-radius:20px;display:block}
+.fallback{display:none;color:#f5f2e9;padding:40px 18px;text-align:center;font-weight:600}
+.phone.off video,.phone.off .snap{display:none}
+.phone.off .fallback{display:block}
+.ad{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 18px}
+.adh{display:flex;gap:12px;align-items:center;margin-bottom:6px}
+.adh b{display:block;line-height:1.2}
+.adh small{color:var(--mute);font-size:13px}
 .av{width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--lime);display:grid;place-items:center;font:700 17px "Hanken Grotesk",sans-serif;flex:none}
-.ph b{display:block;line-height:1.2}
-.ph small{color:var(--mute);font-size:13px}
-.body{padding:6px 18px 16px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:15px;line-height:1.6}
-mark{background:var(--lime2);box-shadow:inset 0 -3px 0 var(--lime);color:inherit;padding:1px 2px;border-radius:3px}
-.pin{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--ink);color:var(--lime);font-size:11px;margin-right:4px;vertical-align:2px}
-.media{margin:0 18px;border-radius:10px;background:repeating-linear-gradient(135deg,#efece2 0 12px,#e8e4d8 12px 24px);color:var(--mute);font-size:14px;padding:22px 16px;text-align:center}
-.lk{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:12px 18px 18px;padding:12px 14px;background:#f3f1ea;border-radius:10px;flex-wrap:wrap}
-.lk small{display:block;color:var(--mute);font-size:13px;overflow-wrap:anywhere}
-.lk b{display:block;font-size:15px}
-.btn{display:inline-block;padding:9px 14px;border-radius:8px;background:#e4e1d6;font-weight:600;font-size:14px;white-space:nowrap}
-.cap{font-size:13px;color:var(--mute);margin:8px 4px 0}
-.notes{padding-block:clamp(28px,4vw,56px);border-top:1px solid var(--line)}
-.notes h2{font-size:clamp(26px,3vw,34px);margin-bottom:20px}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.issue{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;display:grid;gap:8px;align-content:start}
-.top{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.chip{font-size:13px;font-weight:600;padding:3px 10px;border-radius:99px;background:#eceadf;white-space:nowrap}
-.chip.critical{background:var(--red);color:#fff}
-.chip.high{background:#ffe1c7;color:#7a3a00}
-.rule{font-size:13px;color:var(--mute)}
-.issue h3{font-size:19px}
-.issue p{margin:0}
-.issue .lbl{font-weight:600}
-.good{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:28px}
-.good div{background:var(--lime2);border-radius:14px;padding:16px 20px}
-.good h3{font-size:17px;margin-bottom:6px}
-.good ul{margin:0;padding-left:18px}
-.facts{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px}
-.facts dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:6px 16px;margin:8px 0 0;font-size:15px}
-.facts dt{color:var(--mute)}
-.facts dd{margin:0;overflow-wrap:anywhere}
-.cta{background:var(--ink);color:#f5f2e9}
-.cta .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:32px;padding-block:clamp(32px,5vw,64px);align-items:center}
-.cta h2{font-size:clamp(28px,3.4vw,40px)}
-.cta p{color:#cfcbbf;margin:12px 0 0;max-width:36em}
-.acts{display:grid;gap:12px}
-.go{display:block;text-align:center;padding:15px 18px;border-radius:12px;font-weight:700;text-decoration:none}
-.go.p{background:var(--lime);color:var(--ink)}
-.go.s{border:1px solid #57554f;color:#f5f2e9}
-.contact{font-size:14px;color:#cfcbbf;text-align:center}
+.adf{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px;padding:12px 14px;background:#f3f1ea;border-radius:10px;flex-wrap:wrap}
+.adf small{display:block;color:var(--mute);font-size:13px}
+.copy{margin-top:12px;width:100%;min-height:44px;border-radius:10px;border:1px solid var(--line);background:var(--bg);font:600 14px Inter,sans-serif;cursor:pointer;color:var(--ink)}
+.dark{background:var(--ink);color:#f5f2e9;padding-block:clamp(36px,5vw,64px)}
+.dark .two{align-items:center}
+.explainer{margin:0}
+.explainer video{display:block;width:100%;border-radius:18px;background:#000}
+.dark h2{margin:14px 0 16px}
+.acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.contact{color:#cfcbbf;font-size:14px;margin:14px 0 0}
 footer{font-size:13px;color:var(--mute);padding-block:20px 40px}
-@media(max-width:860px){.first{grid-template-columns:minmax(0,1fr)}.grid,.good,.cta .wrap{grid-template-columns:minmax(0,1fr)}}
-@media(prefers-reduced-motion:no-preference){.meter i{animation:grow 1s ease-out both}@keyframes grow{from{width:0}}}
+@media(max-width:760px){.two{grid-template-columns:minmax(0,1fr)}.phone{max-width:380px;margin-inline:auto;width:100%}.acts .btn{flex:1 1 100%}}
 </style></head><body>
-<header><div class="wrap"><a href="https://www.adsure.in"><img class="logo" src="https://www.adsure.in/logo-dark.png" alt="adsure" onerror="this.style.visibility='hidden'"></a><span class="when">Checked on 24 Nov 2026</span></div></header>
-<main>
-<section class="wrap first">
- <div>
-  <div class="for">Free ad review for Amama</div>
-  <h1>Your live Meta ad, reviewed by the AdSure team</h1>
-  <div class="score"><div class="num" aria-label="Score 82 out of 100">82<small>/100</small></div><div class="verdict">A solid ad with a few quick wins.</div></div>
-  <div class="meter ok"><i style="width:82%"></i></div><div class="scale"><span>0</span><span>100</span></div>
-  <div class="fixfirst"><h2>Fix these first</h2><ol><li><span class="n">1</span><div><b>Festive copy after the festival</b><span>Your collection is already wedding-ready, so let the copy catch up: same video, a new first line about shaadi looks.</span></div></li><li><span class="n">2</span><div><b>No price in the ad</b><span>Add “From ₹1,7xx” to the headline so clicks come from people ready to buy.</span></div></li><li><span class="n">3</span><div><b>Bold “fancy font” text</b><span>Use normal text. Screen readers can&#x27;t read these letters and they can look spammy.</span></div></li></ol></div>
- </div>
- <div>
-  <div class="post">
-   <div class="ph"><div class="av">A</div><div><b>Amama</b><small>Sponsored · Video · live 112 days</small></div></div>
-   <div class="body"><mark><b class="pin">1</b>The festive season has begun</mark>, and so has the search for the perfect jewellery.
-<mark><b class="pin">3</b>𝐃𝐢𝐬𝐜𝐨𝐯𝐞𝐫</mark> 𝐡𝐚𝐧𝐝𝐜𝐫𝐚𝐟𝐭𝐞𝐝 𝐭𝐫𝐚𝐝𝐢𝐭𝐢𝐨𝐧𝐚𝐥 𝐍𝐞𝐜𝐤𝐥𝐚𝐜𝐞𝐬, 𝐄𝐚𝐫𝐫𝐢𝐧𝐠𝐬, 𝐁𝐚𝐧𝐠𝐥𝐞𝐬, 𝐌𝐚𝐚𝐧𝐠 𝐓𝐢𝐤𝐤𝐚𝐬, 𝐁𝐫𝐚𝐜𝐞𝐥𝐞𝐭𝐬, 𝐑𝐢𝐧𝐠𝐬 and more—crafted to make every celebration feel a little more special.
+<header class="top"><div class="wrap"><a href="https://www.adsure.in"><img class="logo" src="https://www.adsure.in/assets/logo-dark.png" alt="adsure" height="28"></a><span>Made for Amama · 24 Nov 2026</span></div></header>
+<section class="hero"><div class="wrap">
+ <h1>We made your handmade traditional jewellery ad ready to sell more</h1>
+ <ul class="hero-pts"><li>Your live ad, and what's holding it back</li><li>Our version, ready to test</li><li>An ad in your space that's working right now</li></ul>
+ <a class="btn lime" href="https://wa.me/917607492323?text=Hi%20AdSure%2C%20I%20saw%20the%20ad%20review%20for%20Amama.%20I%27d%20like%20the%20free%2015-min%20call.">Book a free 15-min call</a>
+</div></section>
+
+<section class="blk"><div class="wrap two">
+ <figure class="phone" aria-label="Amama live ad"><video controls playsinline preload="metadata" poster="https://scontent.fdel14-1.fna.fbcdn.net/v/t39.35426-6/761811462_1923658778279590_2777790945081963615_n.jpg?_nc_cat=102&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=c53f8f&amp;_nc_ohc=OesEXmoe60AQ7kNvwGjgNOR&amp;_nc_oc=Adr_WKLkxHBiUI4_4qTur1tCsTL5Mo1VF8Oi6foZDOUYgaIgc9PTrJ4xvOzIVe_erVh2d9AEoQ05axdN075RsBVh&amp;_nc_zt=14&amp;_nc_ht=scontent.fdel14-1.fna&amp;_nc_gid=3QO2DZa3VFONUpn2poA9KQ&amp;_nc_ss=70389&amp;oh=00_AQRIEWpQ3PRjg2kKiSLHHefHh3VCTVL1TrdXzgFpEcwH0w&amp;oe=6B0B680E"><source src="https://video.fdel14-2.fna.fbcdn.net/o1/v/t2/f2/m366/AQNcZXOIkQzb3Sjn-A8XR3pqu7AKqAHGS4f7hLdFqZdWCaBI_K2VbvNyJJz35Ej3yiMuT_Xkl9dG0FnZudUPopKb8IQb7skGOqDpW_qU2NeDkQ.mp4?_nc_cat=111&amp;_nc_oc=AdrZ1ypgoavB5GP2S_JKNi3QCClKTaLrpXVThlDi8x6sqCwlTLV0ZUZZY-t3XsQng9NYPp3-XSCFA04SkFK7qPAi&amp;_nc_sid=b66105&amp;_nc_ht=video.fdel14-2.fna.fbcdn.net&amp;_nc_ohc=dc2ZxqeMhDkQ7kNvwE6SNfo&amp;efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjI4Mjc3MjQxNzc2MDE4NzIsImFzc2V0X2FnZV9kYXlzIjoxMTIsInZpX3VzZWNhc2VfaWQiOjEwNzk5LCJkdXJhdGlvbl9zIjoxNiwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&amp;ccb=17-1&amp;vs=985edabb7795d10b&amp;_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC83QzRBREQwOUI0REJDODFEMDA5MTQxRDVGMzNDRjU5NF9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50LzdGNDI5RTY3QTRBNDFFNjA3MjAzQzc3MkJDRTRFNkI3X2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwOIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRJjb3B5X3NhbXBsZV9ncm91cHMBMRUAACag1YfymvOFChUCKAJDMywXQDDEGJN0vGoYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&amp;_nc_gid=3QO2DZa3VFONUpn2poA9KQ&amp;_nc_ss=70389&amp;_nc_map=urlgen_bucketless&amp;_nc_zt=28&amp;oh=00_AQSLXxhgE1jYxSzrs6_DKo3Qgm-wAoevcumCsEiTVpWuOA&amp;oe=6B0B89AD" type="video/mp4"></video><a class="fallback" href="https://www.facebook.com/ads/library/?id=1597037821937425">Watch this ad on the Meta Ad Library</a></figure>
+ <div><span class="step">1</span><h2>Your ad right now</h2><p class="meta">Live since 4 Aug 2026 · 4 months · 16-second video</p>
+ <ul class="pts"><li class="good">A short 16-second video, plus strong trust points: ready to ship, COD, handmade.</li><li class="fix">It says “The festive season has begun”. It&#x27;s been live since 4 Aug and Diwali is over. Wedding season is what&#x27;s on now.</li><li class="fix">Your Festive&#x27;26 page is full of wedding pieces (kaleeras, mandap necklace, bride eyewear), but the ad never says wedding.</li><li class="fix">No price, so people who can&#x27;t afford ₹2,000+ still click and you pay for it.</li></ul>
+ <details><summary>See your ad text</summary><pre>The festive season has begun, and so has the search for the perfect jewellery.
+𝐃𝐢𝐬𝐜𝐨𝐯𝐞𝐫 𝐡𝐚𝐧𝐝𝐜𝐫𝐚𝐟𝐭𝐞𝐝 𝐭𝐫𝐚𝐝𝐢𝐭𝐢𝐨𝐧𝐚𝐥 𝐍𝐞𝐜𝐤𝐥𝐚𝐜𝐞𝐬, 𝐄𝐚𝐫𝐫𝐢𝐧𝐠𝐬, 𝐁𝐚𝐧𝐠𝐥𝐞𝐬, 𝐌𝐚𝐚𝐧𝐠 𝐓𝐢𝐤𝐤𝐚𝐬, 𝐁𝐫𝐚𝐜𝐞𝐥𝐞𝐭𝐬, 𝐑𝐢𝐧𝐠𝐬 and more—crafted to make every celebration feel a little more special.
 ✈️ Ready to Ship | 💳 COD | 🌍 Global Delivery
-🧵 Handmade with love in India ❤️</div>
-   <div class="media">Video, live since 4 Aug 2026</div>
-   <div class="lk"><div><small>www.amama.in</small><b>Celebrate Every Tradition with Amama ❤️</b></div><span class="btn">Shop now</span></div>
-  </div>
-  <p class="cap">Copy as it appears in the Meta Ad Library. Numbers match the notes below.</p>
- </div>
-</section>
-<section class="notes"><div class="wrap">
- <h2>Everything we found</h2>
- <div class="grid"><article class="issue"><div class="top"><span class="n">1</span><span class="chip medium">Medium</span><span class="rule">AdSure check</span></div>
-<h3>Festive copy after the festival</h3><p><span class="lbl">What we saw:</span> “The festive season has begun”, live since 4 Aug, still running after Diwali.</p><p><span class="lbl">Fix:</span> Your collection is already wedding-ready, so let the copy catch up: same video, a new first line about shaadi looks.</p></article><article class="issue"><div class="top"><span class="n">2</span><span class="chip low">Low</span><span class="rule">AdSure check</span></div>
-<h3>No price in the ad</h3><p><span class="lbl">What we saw:</span> Pieces in the collection start around ₹1,700. The ad gives no price.</p><p><span class="lbl">Fix:</span> Add “From ₹1,7xx” to the headline so clicks come from people ready to buy.</p></article><article class="issue"><div class="top"><span class="n">3</span><span class="chip low">Low</span><span class="rule">AdSure check</span></div>
-<h3>Bold “fancy font” text</h3><p><span class="lbl">What we saw:</span> The second line uses bold Unicode letters.</p><p><span class="lbl">Fix:</span> Use normal text. Screen readers can&#x27;t read these letters and they can look spammy.</p></article></div>
- <div class="good">
-  <div><h3>What's working</h3><ul><li>Ready to ship, COD and handmade are clear trust points.</li><li>The Festive&#x27;26 collection is already full of wedding pieces (kaleeras, a mandap necklace, bride eyewear).</li></ul></div>
-  <div class="facts"><h3>The ad we checked</h3><dl>
-   <dt>Ad</dt><dd><a href="https://www.facebook.com/ads/library/?id=1597037821937425">Meta Ad Library #1597037821937425</a></dd>
-   <dt>Live since</dt><dd>4 Aug 2026</dd>
-   <dt>Format</dt><dd>Video</dd>
-   <dt>Button</dt><dd>Shop now</dd>
-   <dt>Links to</dt><dd>https://www.amama.in/collections/festive26</dd>
-  </dl></div>
- </div>
+🧵 Handmade with love in India ❤️</pre><p class="meta">Headline: Celebrate Every Tradition with Amama ❤️</p></details>
+ <a class="small" href="https://www.facebook.com/ads/library/?id=1597037821937425">Open in Meta Ad Library</a></div>
 </div></section>
-<section class="cta"><div class="wrap">
- <div><h2>This was the quick look. The full review goes deeper.</h2>
- <p>Our experts and AI check your creative, copy, landing page and targeting, and compare you with competitors' ads that are working right now. AdSure never logs into or changes your ad account.</p></div>
- <div class="acts"><a class="go p" href="https://www.adsure.in">Get your full review</a><a class="go s" href="https://wa.me/917607492323">Talk to us on WhatsApp</a><div class="contact">hi@adsure.in · +91 76074 92323</div></div>
+
+<section class="blk tint"><div class="wrap two">
+ <div class="ad"><div class="adh"><span class="av">A</span><div><b>Amama</b><small>Sponsored</small></div></div>
+  <pre id="ours">Shaadi season is here 💍
+
+Handmade kaleeras, maang tikkas, haathphool and chandbalis for every function: mehndi, haldi, sangeet, pheras.
+
+✈️ Ready to ship | 💳 COD | 🌍 Global delivery
+🧵 Handmade in India
+
+Shop the wedding edit 👇</pre>
+  <div class="adf"><div><small>Headline</small><b>Handmade wedding jewellery · From ₹1,700</b></div><span class="btn ghost">Shop now</span></div>
+  <button class="copy" data-copy="ours">Copy this text</button></div>
+ <div><span class="step">2</span><h2>Our version, ready to test</h2><p class="meta">Run it next to your current ad for 7 days and keep the winner.</p>
+ <ul class="pts"><li class="good">Switched from “festive” to “shaadi season”, which is what people are buying for now.</li><li class="good">Named the pieces and the functions, so a bride sees her own wedding in it.</li><li class="good">Added a starting price to pre-qualify clicks.</li><li class="good">Plain text instead of the bold “fancy font”, which some phones and screen readers show badly.</li></ul></div>
 </div></section>
-</main>
-<footer class="wrap">We used only public information: your ad in the Meta Ad Library and your product page, checked on 24 Nov 2026. We can't see your spend or results, so the score covers the ad and page, not performance. Each issue takes points off by how much it can cost you. AdSure is not affiliated with Meta. Be Sure with Adsure.</footer>
-</body></html>
+
+<section class="blk"><div class="wrap two">
+ <figure class="phone" aria-label="Kushals ad"><video controls playsinline preload="metadata" poster="https://scontent.fjlr2-2.fna.fbcdn.net/v/t39.35426-6/765995708_2225602761628708_3309153869019738182_n.jpg?_nc_cat=103&amp;_nc_map=urlgen_bucketless&amp;ccb=1-7&amp;_nc_sid=c53f8f&amp;_nc_ohc=O4gh335N9u4Q7kNvwHFHa0R&amp;_nc_oc=AdqBML_mqeLQz9ztVWSRvuNM8vGSnvfsQe92IyqsXq2nRQfpKcgPVkLXnExQKkZdoaPA2X6l_d3goiODzwmxwL7b&amp;_nc_zt=14&amp;_nc_ht=scontent.fjlr2-2.fna&amp;_nc_gid=CjrX_FpH78xrFvpZ3GuN0g&amp;_nc_ss=70389&amp;oh=00_AQRPqY8NhxQLjO853ZDHP5mUFo5kinQCZOsQuN60mfZlIQ&amp;oe=6B0B944C"><source src="https://video-bom2-4.xx.fbcdn.net/o1/v/t2/f2/m366/AQPFFIYppFjuj6KidZKGtmaOhaAj5ieRbxmdSbJoefaPA09y8NmJYEluJy99gk_cGkeiyK31qUGkoA31CFerLXqj8g53TT-wUwG961o8Phg96w.mp4?_nc_cat=103&amp;_nc_sid=b66105&amp;_nc_ht=video-bom2-4.xx.fbcdn.net&amp;_nc_ohc=RuPasjb1ofYQ7kNvwFrJKbK&amp;efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5WSV9VU0VDQVNFX1BST0RVQ1RfVFlQRS4uQzMuNzIwLmRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHAiLCJ4cHZfYXNzZXRfaWQiOjEyMzc0ODQwOTg0ODAyODksImFzc2V0X2FnZV9kYXlzIjoxMTEsInZpX3VzZWNhc2VfaWQiOjEwNzk5LCJkdXJhdGlvbl9zIjo1NCwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&amp;ccb=17-1&amp;vs=367aee552cd67914&amp;_nc_vs=HBksFQIYRWZiX2VwaGVtZXJhbC9GRDQ2RTYyQjFDQjJDM0M3QzQwODg0MTI5NTVFOUU5RV9tdF8xX3ZpZGVvX2Rhc2hpbml0Lm1wNBUAAsgBEgAVAhhAZmJfcGVybWFuZW50L0UxNEUwMEEwNkU3RTJBNkNEN0ZDNzZCQjE4NTMyMDlEX2F1ZGlvX2Rhc2hpbml0Lm1wNBUCAsgBEgAoABgAGwOIB3VzZV9vaWwBMRJwcm9ncmVzc2l2ZV9yZWNpcGUBMRJjb3B5X3NhbXBsZV9ncm91cHMBMRUAACbCoteBh9-yBBUCKAJDMywXQEsZmZmZmZoYGWRhc2hfaDI2NC1iYXNpYy1nZW4yXzcyMHARAHUAZd6oAQA&amp;_nc_gid=CjrX_FpH78xrFvpZ3GuN0g&amp;_nc_ss=70389&amp;_nc_map=urlgen_bucketless&amp;_nc_zt=28&amp;oh=00_AQRfHYpCSC2ElgFKA2VmxfokwzZFsKWWAjLa_HSnRG0mvA&amp;oe=6B0B9D0D" type="video/mp4"></video><a class="fallback" href="https://www.facebook.com/ads/library/?id=1083871424070054">Watch this ad on the Meta Ad Library</a></figure>
+ <div><span class="step">3</span><h2>An ad that's working in your space</h2><p class="meta"><b>Kushals</b> · Bridal Collection<br>Live since 7 Aug 2026 · 4 months · 54-second video</p>
+ <p class="note">Ads that stay live for months usually do so because they keep selling.</p>
+ <ul class="pts"><li class="good">Names every ceremony (Mehndi, Sangeet, Baraat, Varmala), so every bride feels it&#x27;s for her.</li><li class="good">Stacks trust: free shipping, 15-day returns, COD, 4.9 on Google.</li><li class="good">Separate landing pages for North and South Indian brides.</li><li class="good">14 copies of this ad are live, a sign it&#x27;s working and being scaled.</li></ul>
+ <p class="borrow"><b>Borrow this:</b> Speak to the bride and her functions, and put every trust point in one line.</p>
+ <a class="small" href="https://www.facebook.com/ads/library/?id=1083871424070054">Open in Meta Ad Library</a></div>
+</div></section>
+
+<section class="dark"><div class="wrap two">
+ <figure class="explainer"><video controls playsinline preload="metadata" src="https://www.adsure.in/assets/adsure-explainer.mp4"></video></figure>
+ <div><img class="logo" src="https://www.adsure.in/assets/logo-light.png" alt="adsure" height="28" onerror="this.remove()"><h2>How AdSure works</h2>
+ <ul class="pts light"><li class="good">Check any ad before you spend: creative, copy, landing page and targeting.</li>
+ <li class="good">See your competitors' best-running ads and why they work.</li>
+ <li class="good">Our ad experts and AI review it together, and we never touch your ad account.</li></ul>
+ <div class="acts"><a class="btn lime" href="https://wa.me/917607492323?text=Hi%20AdSure%2C%20I%20saw%20the%20ad%20review%20for%20Amama.%20I%27d%20like%20the%20free%2015-min%20call.">Book a free 15-min call</a><a class="btn line" href="https://www.adsure.in">See AdSure</a></div>
+ <p class="contact">hi@adsure.in · WhatsApp +91 76074 92323</p></div>
+</div></section>
+<footer class="wrap">Made from public information: your ad in the Meta Ad Library and your website, checked on 24 Nov 2026. We can't see your spend or results. AdSure is not affiliated with Meta. Be Sure with Adsure.</footer>
+<script>{
+const figs=[...document.querySelectorAll('figure.phone')];
+figs.forEach(f=>{const v=f.querySelector('video');const s=f.querySelector('source');
+ const fail=()=>f.classList.add('off');
+ if(s) s.addEventListener('error',fail); if(v) v.addEventListener('error',fail);
+ const imgs=[...f.querySelectorAll('img')]; let bad=0;
+ imgs.forEach(i=>i.addEventListener('error',()=>{i.remove(); if(++bad===imgs.length) fail();}));
+});
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{
+ const t=document.getElementById(b.dataset.copy).innerText; const o=b.textContent;
+ try{await navigator.clipboard.writeText(t); b.textContent='Copied';}catch(_){b.textContent='Select and copy';}
+ setTimeout(()=>b.textContent=o,1500);}));
+}</script></body></html>

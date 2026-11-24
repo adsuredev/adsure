@@ -1,5 +1,5 @@
-AdSure live-ad audits (pilot batch, checked 24 Nov 2026)
+AdSure ad makeovers (5 brands, 24 Nov 2026)
 
-Copy this whole "audit" folder into the root of the adsure landing-page repo and push.
-Each brand's review then opens at https://www.adsure.in/audit/<brand>, e.g. /audit/healthfarm.
-Pages carry noindex, so Google won't list them. The logo loads from https://www.adsure.in/logo-dark.png.
+Copy this "audit" folder into the root of the adsure repo (next to index.html) and commit to main.
+Each page then opens at https://www.adsure.in/audit/<brand>, e.g. /audit/amama.
+Pages carry noindex. Brand videos load from Facebook's servers and those links stop working after about a week.
