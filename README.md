@@ -1,13 +1,19 @@
 # AdSure landing page
 
-One page, no build step. Upload this folder to GitHub and it works.
+A few plain pages, no build step. Upload this folder to GitHub and it works.
 
 ```
-index.html          the whole page (HTML, CSS and JavaScript)
+index.html          home page (short): hero, problems, how it works, links to the other pages, reviews, sign-up form
+features.html       /features: what we review, video, research tools, after your review, example review
+why-adsure.html     /why-adsure: vs Meta and Google, vs agencies and AI, account safety, what we promise
+pricing.html        /pricing: the plan, why it's worth it, calculators, sign-up form, price questions
+faq.html            /faq: all questions (Google FAQ data lives here)
+assets/site.css     styles shared by those 5 pages
+assets/site.js      script shared by those 5 pages (form, popup, seat count, calculators, reviews, video, menu)
 terms.html, privacy.html, refund-policy.html   policy pages (styles in assets/legal.css)
 heatmap.html        free ad attention heatmap at /heatmap (no sign-up; runs in the browser, ads are never uploaded)
 assets/heatmap.js   the heatmap model used by heatmap.html
-vercel.json         clean links: /terms, /privacy, /refund-policy
+vercel.json         clean links: /features, /pricing, /terms and so on (no .html)
 supabase.sql        run once in Supabase to create the sign-up table and live counter
 assets/
   logo-dark.png     black logo (used on cream)
@@ -23,7 +29,7 @@ assets/
 
 1. Open your Supabase project, go to **SQL Editor**, paste everything from `supabase.sql`, and press **Run**.
 2. Go to **Project Settings > API** (or **API Keys**). Copy the **Project URL** and the **anon public** key (newer projects call it the **publishable** key).
-3. Open `index.html`, scroll to the bottom, and paste them into `CONFIG`:
+3. Open `config.js` and paste them in (each page also keeps the same keys inline as `ADSURE_DEFAULTS`, as a backup):
    ```js
    SUPABASE_URL: "https://yourproject.supabase.co",
    SUPABASE_ANON_KEY: "your-anon-or-publishable-key",
@@ -101,3 +107,12 @@ After the heatmap, image ads get a "Make my free AI image" box: one AI-improved 
 3. **Vercel** (adsure project) → Settings → Environment Variables: `CF_ACCOUNT_ID`, `CF_API_TOKEN`. `SUPABASE_SECRET_KEY` and `TURNSTILE_SECRET_KEY` are already there for the sign-up form. Redeploy.
 
 Limits: 1 per browser, `FREE_IMAGE_PER_IP_DAY` per network per day (default 3), `FREE_IMAGE_DAILY_CAP` for everyone per day (default 60, inside Cloudflare's free daily allowance), plus Turnstile. IPs are stored only as salted hashes and deleted after about 85 days.
+
+## Editing the pages
+
+The top menu, footer and sign-up popup are repeated in each of the 5 pages. If you change one of them
+(for example add a menu link), make the same change in index.html, features.html, why-adsure.html,
+pricing.html and faq.html. Styles and scripts are shared, so change those once in assets/site.css or
+assets/site.js. After changing either file, bump the `?v=` number where the pages load it, so visitors get the new file.
+
+The sign-up popup opens on its own at most once per visit, even if someone opens several pages.
