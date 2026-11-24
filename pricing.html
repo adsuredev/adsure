@@ -103,7 +103,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/outfit-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/dm-sans-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css?v=3">
+<link rel="stylesheet" href="/assets/site.css?v=4">
 </head>
 <body>
 
@@ -172,9 +172,13 @@
         </div>
         <p class="gst-line bill-year" hidden><span data-year-gst>₹23,599</span> a year including GST. Works out to <span data-year-month>₹1,667</span> a month, so you save <span data-year-save>₹15,989</span> a year.</p>
         <p class="perk bill-year" hidden><span><b>4 free 60-minute expert calls a year</b>, one every quarter. Worth ₹10,396.</span></p>
-        <div class="perday">
+        <div class="perday bill-month">
+          <span class="eq" data-perday-month>₹100</span>
+          <p>a day. <b>₹2,999 ÷ 30 days = ₹<span data-perday-month-exact>99.97</span></b>, before GST. That's what it costs to get every ad reviewed before you spend on it.</p>
+        </div>
+        <div class="perday bill-year" hidden>
           <span class="eq" data-perday>₹55</span>
-          <p>a day on the yearly plan. <b>₹19,999 ÷ 365 days = ₹<span data-perday-exact>54.79</span></b>, before GST. That's what it costs to get every ad reviewed before you spend on it.</p>
+          <p>a day. <b>₹19,999 ÷ 365 days = ₹<span data-perday-exact>54.79</span></b>, before GST. That's what it costs to get every ad reviewed before you spend on it.</p>
         </div>
         <ul class="incl">
           <li>Google Ads and Meta Ads (Facebook and Instagram)</li>
@@ -189,7 +193,6 @@
           <li>Indian ad rules built in</li>
           <li>Fix and check again after every change</li>
           <li>No access to your ad account needed, ever</li>
-          <li>Free 60-minute expert calls: one every quarter on the yearly plan, one after every 6 monthly payments</li>
         </ul>
         <p class="addons"><b>Want to talk to a person?</b> Book a one-on-one expert call: ₹1,499 for 30 minutes or ₹2,599 for 60 minutes. Your free plan calls are 60 minutes.</p>
         <a class="btn btn-lime" href="#join">Claim my seat</a>
@@ -562,6 +565,6 @@ window.ADSURE_DEFAULTS = {
 };
 </script>
 <script src="/config.js"></script>
-<script src="/assets/site.js?v=3"></script>
+<script src="/assets/site.js?v=4"></script>
 </body>
 </html>

@@ -35,6 +35,8 @@ const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   set("[data-save-pct]", Math.round((1 - y / (m * 12)) * 100) + "%");
   set("[data-perday]", "₹" + Math.round(perDay));
   set("[data-perday-exact]", perDay.toFixed(2));
+  set("[data-perday-month]", "₹" + Math.round(m / 30));
+  set("[data-perday-month-exact]", (m / 30).toFixed(2));
   if (CONFIG.REGULAR_PRICE) { const r = $("#regular-price"); if (r) { r.textContent = inr(CONFIG.REGULAR_PRICE); r.hidden = false; } }
   const wp = $("#w-price"); if (wp) wp.textContent = inr(m);
   const yr = $("#yr"); if (yr) yr.textContent = new Date().getFullYear();
