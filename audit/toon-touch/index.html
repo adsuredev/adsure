@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Toon Touch ad review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE  direct, friendly, expert: a reviewer's notes, not a sales pitch
+   IDEA   an editor's marked-up proof of the brand's own live ad
+   PICTURE their ad as a feed post, with lime highlights and numbered pins tied to the notes
+   COLOUR AdSure cream ground, near-black ink, lime accent; red only for critical
+   TYPE   Hanken Grotesk display + Inter text
+   LAYOUT laptop: score and fix-first list left, marked-up ad right; phone: score, ad, notes */
+:root{color-scheme:light;--bg:#f5f2e9;--ink:#141412;--mute:#5d5b55;--line:#dcd7c9;--card:#fff;--lime:#c9f23d;--lime2:#e9fbb0;--red:#d93a2e;--amber:#b86e00}
+*{box-sizing:border-box;min-width:0}
+html,body{margin:0;background:var(--bg);color:var(--ink)}
+body{font:16px/1.55 Inter,system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+h1,h2,h3{font-family:"Hanken Grotesk",Inter,sans-serif;letter-spacing:-.02em;line-height:1.08;margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding:0 max(5vw,16px)}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px;flex-wrap:wrap}
+.logo{height:30px;width:auto;display:block}
+.when{color:var(--mute);font-size:14px}
+.first{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(24px,4vw,56px);padding-block:clamp(28px,4vw,56px)}
+.for{font-size:15px;color:var(--mute);margin-bottom:10px}
+h1{font-size:clamp(32px,4.4vw,48px);text-wrap:balance}
+.score{display:flex;align-items:flex-end;gap:16px;margin:24px 0 8px;flex-wrap:wrap}
+.num{font:700 clamp(72px,10vw,112px)/.9 "Hanken Grotesk",sans-serif;letter-spacing:-.04em}
+.num small{font-size:.32em;color:var(--mute);letter-spacing:0;margin-left:4px}
+.verdict{font-size:18px;font-weight:600;max-width:22em;padding-bottom:10px}
+.meter{height:12px;background:var(--line);border-radius:6px;overflow:hidden;margin:6px 0 4px}
+.meter i{display:block;height:100%;background:var(--ink)}
+.meter.ok i{background:#5f8f00}
+.scale{display:flex;justify-content:space-between;font-size:13px;color:var(--mute)}
+.fixfirst{margin-top:28px}
+.fixfirst h2{font-size:22px;margin-bottom:12px}
+.fixfirst ol{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.fixfirst li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:12px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.n{width:28px;height:28px;border-radius:50%;background:var(--lime);display:grid;place-items:center;font:700 14px Inter,sans-serif}
+.fixfirst b{display:block}
+.fixfirst span{color:var(--mute);font-size:15px}
+.post{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:0 1px 0 var(--line);overflow:hidden;align-self:start}
+.ph{display:flex;align-items:center;gap:12px;padding:16px 18px 8px}
+.av{width:40px;height:40px;border-radius:50%;background:var(--ink);color:var(--lime);display:grid;place-items:center;font:700 17px "Hanken Grotesk",sans-serif;flex:none}
+.ph b{display:block;line-height:1.2}
+.ph small{color:var(--mute);font-size:13px}
+.body{padding:6px 18px 16px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:15px;line-height:1.6}
+mark{background:var(--lime2);box-shadow:inset 0 -3px 0 var(--lime);color:inherit;padding:1px 2px;border-radius:3px}
+.pin{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--ink);color:var(--lime);font-size:11px;margin-right:4px;vertical-align:2px}
+.media{margin:0 18px;border-radius:10px;background:repeating-linear-gradient(135deg,#efece2 0 12px,#e8e4d8 12px 24px);color:var(--mute);font-size:14px;padding:22px 16px;text-align:center}
+.lk{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:12px 18px 18px;padding:12px 14px;background:#f3f1ea;border-radius:10px;flex-wrap:wrap}
+.lk small{display:block;color:var(--mute);font-size:13px;overflow-wrap:anywhere}
+.lk b{display:block;font-size:15px}
+.btn{display:inline-block;padding:9px 14px;border-radius:8px;background:#e4e1d6;font-weight:600;font-size:14px;white-space:nowrap}
+.cap{font-size:13px;color:var(--mute);margin:8px 4px 0}
+.notes{padding-block:clamp(28px,4vw,56px);border-top:1px solid var(--line)}
+.notes h2{font-size:clamp(26px,3vw,34px);margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.issue{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;display:grid;gap:8px;align-content:start}
+.top{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.chip{font-size:13px;font-weight:600;padding:3px 10px;border-radius:99px;background:#eceadf;white-space:nowrap}
+.chip.critical{background:var(--red);color:#fff}
+.chip.high{background:#ffe1c7;color:#7a3a00}
+.rule{font-size:13px;color:var(--mute)}
+.issue h3{font-size:19px}
+.issue p{margin:0}
+.issue .lbl{font-weight:600}
+.good{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:28px}
+.good div{background:var(--lime2);border-radius:14px;padding:16px 20px}
+.good h3{font-size:17px;margin-bottom:6px}
+.good ul{margin:0;padding-left:18px}
+.facts{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px}
+.facts dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:6px 16px;margin:8px 0 0;font-size:15px}
+.facts dt{color:var(--mute)}
+.facts dd{margin:0;overflow-wrap:anywhere}
+.cta{background:var(--ink);color:#f5f2e9}
+.cta .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:32px;padding-block:clamp(32px,5vw,64px);align-items:center}
+.cta h2{font-size:clamp(28px,3.4vw,40px)}
+.cta p{color:#cfcbbf;margin:12px 0 0;max-width:36em}
+.acts{display:grid;gap:12px}
+.go{display:block;text-align:center;padding:15px 18px;border-radius:12px;font-weight:700;text-decoration:none}
+.go.p{background:var(--lime);color:var(--ink)}
+.go.s{border:1px solid #57554f;color:#f5f2e9}
+.contact{font-size:14px;color:#cfcbbf;text-align:center}
+footer{font-size:13px;color:var(--mute);padding-block:20px 40px}
+@media(max-width:860px){.first{grid-template-columns:minmax(0,1fr)}.grid,.good,.cta .wrap{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:no-preference){.meter i{animation:grow 1s ease-out both}@keyframes grow{from{width:0}}}
+</style></head><body>
+<header><div class="wrap"><a href="https://www.adsure.in"><img class="logo" src="https://www.adsure.in/logo-dark.png" alt="adsure" onerror="this.style.visibility='hidden'"></a><span class="when">Checked on 24 Nov 2026</span></div></header>
+<main>
+<section class="wrap first">
+ <div>
+  <div class="for">Free ad review for Toon Touch</div>
+  <h1>Your live Meta ad, reviewed by the AdSure team</h1>
+  <div class="score"><div class="num" aria-label="Score 72 out of 100">72<small>/100</small></div><div class="verdict">A solid ad with a few quick wins.</div></div>
+  <div class="meter ok"><i style="width:72%"></i></div><div class="scale"><span>0</span><span>100</span></div>
+  <div class="fixfirst"><h2>Fix these first</h2><ol><li><span class="n">1</span><div><b>Bathrobe ad sends people to the homepage</b><span>Link to the bathrobe collection so the 20% offer is the first thing they see.</span></div></li><li><span class="n">2</span><div><b>Same ad for 9+ months</b><span>It&#x27;s winter, so add a “warm after bath” version with a fresh video.</span></div></li><li><span class="n">3</span><div><b>No proof</b><span>Add a rating or a short parent quote.</span></div></li></ol></div>
+ </div>
+ <div>
+  <div class="post">
+   <div class="ph"><div class="av">T</div><div><b>Toon Touch</b><small>Sponsored · Video · live 287 days</small></div></div>
+   <div class="body">Wrap your kids in comfort—get 20% off on our adorable bathrobes!
+
+✅ Perfect for cozy nights and fun bath time!
+✅ Cash on Delivery available
+✅ Crafted from premium quality materials
+
+Shop now at: www.toontouch.in
+Contact us at: +91 9757337399</div>
+   <div class="media">Video, live since 10 Feb 2026</div>
+   <div class="lk"><div><small>toontouch.in</small><b>Get 20% Off</b></div><span class="btn">Shop now</span></div>
+  </div>
+  <p class="cap">Copy as it appears in the Meta Ad Library. Numbers match the notes below.</p>
+ </div>
+</section>
+<section class="notes"><div class="wrap">
+ <h2>Everything we found</h2>
+ <div class="grid"><article class="issue"><div class="top"><span class="n">1</span><span class="chip high">High</span><span class="rule">META_LP_001</span></div>
+<h3>Bathrobe ad sends people to the homepage</h3><p><span class="lbl">What we saw:</span> The ad is about kids&#x27; bathrobes, and the link is toontouch.in.</p><p><span class="lbl">Fix:</span> Link to the bathrobe collection so the 20% offer is the first thing they see.</p></article><article class="issue"><div class="top"><span class="n">2</span><span class="chip medium">Medium</span><span class="rule">AdSure check</span></div>
+<h3>Same ad for 9+ months</h3><p><span class="lbl">What we saw:</span> Live since 10 Feb.</p><p><span class="lbl">Fix:</span> It&#x27;s winter, so add a “warm after bath” version with a fresh video.</p></article><article class="issue"><div class="top"><span class="n">3</span><span class="chip low">Low</span><span class="rule">META_COPY_007</span></div>
+<h3>No proof</h3><p><span class="lbl">What we saw:</span> No reviews or happy-parent numbers.</p><p><span class="lbl">Fix:</span> Add a rating or a short parent quote.</p></article></div>
+ <div class="good">
+  <div><h3>What's working</h3><ul><li>The offer is in the headline.</li><li>COD and a phone number build trust.</li></ul></div>
+  <div class="facts"><h3>The ad we checked</h3><dl>
+   <dt>Ad</dt><dd><a href="https://www.facebook.com/ads/library/?id=1939259300320359">Meta Ad Library #1939259300320359</a></dd>
+   <dt>Live since</dt><dd>10 Feb 2026</dd>
+   <dt>Format</dt><dd>Video</dd>
+   <dt>Button</dt><dd>Shop now</dd>
+   <dt>Links to</dt><dd>https://toontouch.in/</dd>
+  </dl></div>
+ </div>
+</div></section>
+<section class="cta"><div class="wrap">
+ <div><h2>This was the quick look. The full review goes deeper.</h2>
+ <p>Our experts and AI check your creative, copy, landing page and targeting, and compare you with competitors' ads that are working right now. AdSure never logs into or changes your ad account.</p></div>
+ <div class="acts"><a class="go p" href="https://www.adsure.in">Get your full review</a><a class="go s" href="https://wa.me/917607492323">Talk to us on WhatsApp</a><div class="contact">hi@adsure.in · +91 76074 92323</div></div>
+</div></section>
+</main>
+<footer class="wrap">We used only public information: your ad in the Meta Ad Library and your product page, checked on 24 Nov 2026. We can't see your spend or results, so the score covers the ad and page, not performance. Each issue takes points off by how much it can cost you. AdSure is not affiliated with Meta. Be Sure with Adsure.</footer>
+</body></html>
