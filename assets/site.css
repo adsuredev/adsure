@@ -810,3 +810,6 @@ body:not(.seats-on) .seats{align-self:start}
 .nav .nav-end .btn{white-space:nowrap}
 @media (max-width:400px){.nav .nav-end .btn{padding:9px 13px;font-size:.86rem}.nav-logo img{height:22px}.menu-btn{width:42px;height:42px}.nav-in{gap:10px}}
 @media (max-width:760px){body.mcta-on .fab{opacity:0;pointer-events:none;transform:scale(.8)}}
+.perk{margin-top:12px;display:flex;gap:10px;align-items:flex-start;background:rgba(203,239,47,.1);border:1px solid rgba(203,239,47,.35);border-radius:14px;padding:12px 14px;color:var(--muted-on-ink);font-size:.95rem;line-height:1.45}
+.perk::before{content:"";flex:none;width:22px;height:22px;margin-top:1px;border-radius:50%;background:var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23111014' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'/%3E%3C/svg%3E") center/12px no-repeat}
+.perk b{color:var(--cream)}
