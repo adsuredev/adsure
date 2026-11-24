@@ -20,7 +20,7 @@ window.ADSURE_CONFIG = {
       text: "Priya runs ads and gets nothing, until she checks them first.",
       file: "assets/adsure-explainer.mp4",
       youtube: "",
-      poster: ""                 // optional cover image, e.g. "assets/poster-1.jpg"
+      poster: "assets/explainer-poster.webp"   // optional cover image
     },
     {
       title: "Rohan's story",

@@ -111,8 +111,8 @@ addEventListener("scroll", onScroll, {passive:true}); onScroll();
 })();
 
 /* ---- tabs ---- */
-(function tabs(){
-  const list = $$(".tab");
+(function tabs(){ $$('[role="tablist"]').forEach(group => tabGroup(Array.from(group.querySelectorAll(".tab")))); })();
+function tabGroup(list){
   function select(t){
     list.forEach(x => { const on = x === t; x.setAttribute("aria-selected", on); x.tabIndex = on ? 0 : -1; $("#" + x.getAttribute("aria-controls")).hidden = !on; });
   }
@@ -123,7 +123,7 @@ addEventListener("scroll", onScroll, {passive:true}); onScroll();
       const n = list[(i + (e.key === "ArrowRight" ? 1 : list.length - 1)) % list.length]; select(n); n.focus();
     });
   });
-})();
+}
 
 /* ---- money inputs: format with Indian commas ---- */
 $$(".money input").forEach(inp => {

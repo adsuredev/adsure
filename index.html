@@ -39,7 +39,29 @@
   "address": {
    "@type": "PostalAddress",
    "addressCountry": "IN"
-  }
+  },
+  "legalName": "AdSure",
+  "founder": {
+   "@type": "Person",
+   "name": "Vyom Gupta",
+   "jobTitle": "Founder"
+  },
+  "sameAs": [
+   "https://www.instagram.com/adsure.in/"
+  ],
+  "contactPoint": [
+   {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "hi@adsure.in",
+    "telephone": "+91-7607492323",
+    "areaServed": "IN",
+    "availableLanguage": [
+     "en",
+     "hi"
+    ]
+   }
+  ]
  },
  {
   "@context": "https://schema.org",
@@ -78,10 +100,9 @@
 </script>
 <link rel="icon" href="/assets/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=2">
+<link rel="preload" href="/assets/fonts/outfit-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/dm-sans-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css?v=3">
 </head>
 <body>
 
@@ -94,6 +115,7 @@
       <a href="/why-adsure">Why AdSure</a>
       <a href="/pricing">Price</a>
       <a href="/faq">FAQ</a>
+      <a href="/guides">Guides</a>
       <a href="/heatmap">Free heatmap</a>
     </nav>
     <div class="nav-end">
@@ -112,9 +134,11 @@
         <li><a href="/why-adsure">Why AdSure</a></li>
         <li><a href="/pricing">Price</a></li>
         <li><a href="/faq">FAQ</a></li>
+        <li><a href="/guides">Guides</a></li>
         <li><a href="/heatmap">Free heatmap</a></li>
       </ul>
       <a class="btn btn-lime" href="#join">Get early access</a>
+      <p class="menu-contact">Questions? <a href="https://wa.me/917607492323" target="_blank" rel="noopener">WhatsApp +91 76074 92323</a></p>
     </nav>
   </div>
 </header>
@@ -130,8 +154,9 @@
       <p class="lede">Share your ad creative, ad text and landing page. Our ad experts and AI review all of it and tell you exactly what to fix, in simple words.</p>
       <div class="hero-ctas">
         <a class="btn btn-lime" href="#join">Get early access</a>
-        <a class="btn btn-ghost" href="/features">See what we review</a>
+        <a class="btn btn-ghost" href="#product">See the real app</a>
       </div>
+      <p class="try-free"><a href="/heatmap">Try our free ad heatmap</a>, no sign-up needed.</p>
       <div class="seat-strip" aria-live="polite">
         <span class="live-dot" aria-hidden="true"></span>
         <span>Founding price for the first 500 members only.<span class="seat-n" data-seat="hero"></span></span>
@@ -324,6 +349,40 @@
   </div>
 </section>
 
+<!-- ============ THE REAL APP ============ -->
+<section class="section" id="product" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="kicker">The real app</p>
+      <h2>This is what you get</h2>
+      <p class="lede">Real screens from app.adsure.in, with one of the app's sample ads: a festive kurta ad with a few common mistakes.</p>
+    </div>
+    <div class="prod">
+      <div class="tabs prod-tabs" role="tablist" aria-label="App screens">
+        <button class="tab" role="tab" id="t-pr1" aria-controls="p-pr1" aria-selected="true"><b>1</b> Share your ad</button>
+        <button class="tab" role="tab" id="t-pr2" aria-controls="p-pr2" aria-selected="false" tabindex="-1"><b>2</b> Get your score</button>
+        <button class="tab" role="tab" id="t-pr3" aria-controls="p-pr3" aria-selected="false" tabindex="-1"><b>3</b> Fix what matters</button>
+      </div>
+      <div class="browser">
+        <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>app.adsure.in</span></div>
+        <div class="prod-panel" role="tabpanel" id="p-pr1" aria-labelledby="t-pr1">
+          <img src="/assets/app/setup.webp" width="1400" height="906" loading="lazy" decoding="async" alt="AdSure app: the ad setup screen with a Meta ad for festive kurtas, a ₹1,500 daily budget and a preview of the ad">
+          <p class="prod-cap">Pick Meta or Google, add your creative, ad text and page. About 2 minutes. Nothing is published and nothing is spent.</p>
+        </div>
+        <div class="prod-panel" role="tabpanel" id="p-pr2" aria-labelledby="t-pr2" hidden>
+          <img src="/assets/app/score.webp" width="1400" height="572" loading="lazy" decoding="async" alt="AdSure app: the sample ad scores 4 out of 10 with the verdict Don't run yet">
+          <p class="prod-cap">A score out of 10 and a plain verdict: run it, fix it first, or don't run yet.</p>
+        </div>
+        <div class="prod-panel" role="tabpanel" id="p-pr3" aria-labelledby="t-pr3" hidden>
+          <img class="prod-tall" src="/assets/app/fixes.webp" width="1000" height="1297" loading="lazy" decoding="async" alt="AdSure app: a fix list. Must fix: remove the guaranteed-result claim. Fix before you spend: too many ad sets for the budget.">
+          <p class="prod-cap">The biggest problems first, each with the exact fix. Ask how to fix anything, change your ad and check again.</p>
+        </div>
+      </div>
+      <p class="prod-note">After you sign in you also get the AI score, your competitors' live ads, the best time to run your ads, a landing page check and full expert reviews. <a href="/heatmap">Try our free ad heatmap now</a>, no sign-up needed.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ============ EXPLORE (links to the other pages) ============ -->
 <section class="section" id="explore" style="padding-top:0">
   <div class="wrap">
@@ -427,7 +486,7 @@
         <li><span>2</span><div><b>We reach out</b><p>By email or phone when your seat opens.</p></div></li>
         <li><span>3</span><div><b>Get your first review</b><p>See your score, the problems and the fixes.</p></div></li>
       </ol>
-      <p class="contact-mini">Questions? Write to <a href="mailto:hi@adsure.in">hi@adsure.in</a>.</p>
+      <p class="contact-mini">Questions? Write to <a href="mailto:hi@adsure.in">hi@adsure.in</a> or <a href="https://wa.me/917607492323?text=Hi%20AdSure%2C%20I%20have%20a%20question" target="_blank" rel="noopener">WhatsApp us at +91 76074 92323</a>.</p>
     </div>
 
     <form class="card" id="form" novalidate data-clarity-mask="true">
@@ -512,11 +571,14 @@
           <svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect width="30" height="6.67" fill="#FF9933"/><rect y="13.33" width="30" height="6.67" fill="#138808"/><circle cx="15" cy="10" r="2.6" fill="none" stroke="#000080" stroke-width=".7"/></svg>
           Made in India
         </p>
+        <p class="socials"><a class="soc" href="https://www.instagram.com/adsure.in/" target="_blank" rel="noopener" aria-label="AdSure on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a><a class="soc" href="https://wa.me/917607492323?text=Hi%20AdSure%2C%20I%20have%20a%20question" target="_blank" rel="noopener" aria-label="Chat with AdSure on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.2z"/></svg></a></p>
       </div>
       <div>
         <h4>Contact</h4>
         <ul>
           <li><a href="mailto:hi@adsure.in">hi@adsure.in</a></li>
+          <li><a href="https://wa.me/917607492323?text=Hi%20AdSure%2C%20I%20have%20a%20question" target="_blank" rel="noopener">WhatsApp +91 76074 92323</a></li>
+          <li><a href="https://www.instagram.com/adsure.in/" target="_blank" rel="noopener">Instagram @adsure.in</a></li>
         </ul>
       </div>
       <div>
@@ -528,6 +590,7 @@
           <li><a href="/pricing">Price</a></li>
           <li><a href="/pricing#calculator">Calculators</a></li>
           <li><a href="/faq">FAQ</a></li>
+          <li><a href="/guides">Guides</a></li>
           <li><a href="#join">Get early access</a></li>
         </ul>
       </div>
@@ -547,7 +610,7 @@
       </div>
     </div>
     <div class="legal">
-      <span>© <span id="yr">2026</span> AdSure. All rights reserved.</span>
+      <span>© <span id="yr">2026</span> AdSure (registered company name: AdSure). All rights reserved. Secure payments by Razorpay, with a GST invoice for every payment.</span>
       <span>AdSure is a Shopify Partner. Google Ads, Meta and Shopify are trademarks of their owners. AdSure is independent and not affiliated with Google or Meta.</span>
     </div>
   </div>
@@ -665,6 +728,6 @@ window.ADSURE_DEFAULTS = {
 };
 </script>
 <script src="/config.js"></script>
-<script src="/assets/site.js?v=2"></script>
+<script src="/assets/site.js?v=3"></script>
 </body>
 </html>

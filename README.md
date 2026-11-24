@@ -10,6 +10,10 @@ pricing.html        /pricing: the plan, why it's worth it, calculators, sign-up 
 faq.html            /faq: all questions (Google FAQ data lives here)
 assets/site.css     styles shared by those 5 pages
 assets/site.js      script shared by those 5 pages (form, popup, seat count, calculators, reviews, video, menu)
+guides.html         /guides: list of guides
+guides/*.html       /guides/ad-checklist, /guides/indian-ad-rules, /guides/festival-ad-calendar-2027
+assets/app/         real screenshots of app.adsure.in (sample "Festive kurtas" ad), used in "This is what you get"
+assets/fonts/       Outfit and DM Sans, served from this site (no Google Fonts), with their open font licences
 terms.html, privacy.html, refund-policy.html   policy pages (styles in assets/legal.css)
 heatmap.html        free ad attention heatmap at /heatmap (no sign-up; runs in the browser, ads are never uploaded)
 assets/heatmap.js   the heatmap model used by heatmap.html
@@ -110,9 +114,19 @@ Limits: 1 per browser, `FREE_IMAGE_PER_IP_DAY` per network per day (default 3), 
 
 ## Editing the pages
 
-The top menu, footer and sign-up popup are repeated in each of the 5 pages. If you change one of them
+The top menu, footer and sign-up popup are repeated in each page (the 5 main pages and the guides). If you change one of them
 (for example add a menu link), make the same change in index.html, features.html, why-adsure.html,
 pricing.html and faq.html. Styles and scripts are shared, so change those once in assets/site.css or
 assets/site.js. After changing either file, bump the `?v=` number where the pages load it, so visitors get the new file.
 
 The sign-up popup opens on its own at most once per visit, even if someone opens several pages.
+
+## Contact details on the site
+
+hi@adsure.in, WhatsApp +91 76074 92323, Instagram @adsure.in. Grievance Officer (Privacy page): Vyom Gupta, Founder.
+If any of these change, search all .html files for the old value.
+
+## Guides
+
+Each guide has an "Updated" date and a Sources list. The festival calendar and the ad rules guide go out of date:
+check the dates once a year and the rules every few months (the gaming law is in the Supreme Court).
