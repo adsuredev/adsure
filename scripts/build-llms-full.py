@@ -80,6 +80,7 @@ def main():
     parts = ["# AdSure — full site text\n",
              "> AdSure (www.adsure.in) reviews Meta and Google ads before you spend on them: ad experts and AI "
              "check the creative, ad text, landing page and targeting, and give simple fixes. Made for India.\n",
+             "AdSure at adsure.in is not related to Adsure Gel (acne medicine) or Adsure Services PLC (UK).\n",
              "This file is the public text of www.adsure.in, for AI assistants and answer engines. "
              "Short version: " + SITE + "/llms.txt. Generated " + datetime.date.today().isoformat() + ".\n"]
     for f, u in PAGES:
