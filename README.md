@@ -7,7 +7,7 @@ index.html          home page (short): hero, problems, how it works, links to th
 features.html       /features: what we review, video, research tools, after your review, example review
 why-adsure.html     /why-adsure: vs Meta and Google, vs agencies and AI, account safety, what we promise
 pricing.html        /pricing: the plan, why it's worth it, calculators, sign-up form, price questions
-faq.html            /faq: all questions (Google FAQ data lives here)
+faq.html            /faq: all questions (Google FAQ data lives here; keep the questions in the page and the FAQ data the same)
 assets/site.css     styles shared by those 5 pages
 assets/site.js      script shared by those 5 pages (form, popup, seat count, calculators, reviews, video, menu)
 guides.html         /guides: list of guides
