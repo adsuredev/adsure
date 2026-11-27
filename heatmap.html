@@ -37,18 +37,60 @@
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Web",
   "isAccessibleForFree": true,
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+  "offers": {
+   "@type": "Offer",
+   "price": "0",
+   "priceCurrency": "INR"
+  },
   "description": "See where people look first on your ad image or video. Free, no sign-up, runs in your browser.",
-  "publisher": { "@type": "Organization", "name": "AdSure", "url": "https://www.adsure.in/" }
+  "publisher": {
+   "@type": "Organization",
+   "name": "AdSure",
+   "url": "https://www.adsure.in/",
+   "@id": "https://www.adsure.in/#organization"
+  },
+  "@id": "https://www.adsure.in/heatmap#app",
+  "isPartOf": {
+   "@id": "https://www.adsure.in/#website"
+  },
+  "image": "https://www.adsure.in/assets/og-heatmap.png?v=1"
  },
  {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-   { "@type": "Question", "name": "Is the ad heatmap really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. No sign-up, no limit on how many ads you check." } },
-   { "@type": "Question", "name": "Is my ad uploaded anywhere?", "acceptedAnswer": { "@type": "Answer", "text": "Not for the heatmap. The heatmap is worked out inside your browser, so your image or video never leaves your phone or computer. The only exception is the optional free AI image: if you choose it, a small copy of that one ad is sent to our AI to make it, and neither image is stored." } },
-   { "@type": "Question", "name": "How accurate is an attention heatmap?", "acceptedAnswer": { "@type": "Answer", "text": "It uses a model trained on real eye-tracking studies, so it is good at showing what stands out first and what gets lost. It is a prediction, not a new eye-tracking study of your ad, and it cannot tell you whether people will click or buy." } },
-   { "@type": "Question", "name": "Does it work for video ads?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. It checks the opening frame and one frame for each of the first 3 seconds." } }
+   {
+    "@type": "Question",
+    "name": "Is the ad heatmap really free?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes. No sign-up, no limit on how many ads you check."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Is my ad uploaded anywhere?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Not for the heatmap. The heatmap is worked out inside your browser, so your image or video never leaves your phone or computer. The only exception is the optional free AI image: if you choose it, a small copy of that one ad is sent to our AI to make it, and neither image is stored."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "How accurate is an attention heatmap?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "It uses a model trained on real eye-tracking studies, so it is good at showing what stands out first and what gets lost. It is a prediction, not a new eye-tracking study of your ad, and it cannot tell you whether people will click or buy."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Does it work for video ads?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes. It checks the opening frame and one frame for each of the first 3 seconds."
+    }
+   }
   ]
  }
 ]

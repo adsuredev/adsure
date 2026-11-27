@@ -1,0 +1,39 @@
+# AdSure
+
+> AdSure (www.adsure.in) reviews Meta (Facebook and Instagram) and Google ads before you spend money on them. Ad experts and AI check the creative, ad text, landing page and targeting, give a score out of 10 and a simple fix for every problem. Made for Indian businesses, with Indian ad rules (ASCI, health claims, RBI loan ads, real-money gaming) built in. AdSure never logs in to your ad account.
+
+Key facts:
+
+- What it is: an ad review service for small and growing businesses in India that run Meta and Google ads. It is not an agency and does not run or change your ads; you make the changes yourself.
+- Who reviews: AdSure's ad team (15+ years of running ads) plus AI built on Meta and Google rules and India data.
+- What you get: expert + AI review of creative, ad text, landing page and targeting; AI score out of 10 with exact fixes; 5 full expert reviews a month; ask an expert anytime by text or voice (English, Hindi or Hinglish); AI competitor research with competitors' live Meta and Google ads; best time to run ads (5 years of Google searches in India matched to festivals); website and landing page check on a phone.
+- Price: ₹2,999 a month or ₹19,999 a year (yearly saves 44% and includes a free 60-minute expert call every quarter), plus 18% GST. Monthly plan gets a free 60-minute expert call after every 6 payments in a row. One-on-one expert calls: ₹1,499 for 30 minutes, ₹2,599 for 60 minutes. No lock-in; cancel anytime. Payments by Razorpay (UPI, card, net banking) with a GST invoice.
+- Status: in beta with early access (500 seats). Joining early access is free; you pay only when your seat opens.
+- Account safety: no ad account login or password needed, no automatic changes to your ads.
+- Free tool: an ad attention heatmap at /heatmap, no sign-up; it runs in the browser and the ad never leaves your device.
+- Company: Indian company founded by Vyom Gupta. Contact hi@adsure.in, WhatsApp +91 76074 92323, Instagram @adsure.in.
+
+## Main pages
+
+- [Home](https://www.adsure.in/): what AdSure does, how it works in 3 steps, early tester reviews
+- [Features](https://www.adsure.in/features): everything AdSure checks, research tools, help after the review, an example review of a clothing brand's ad
+- [Why AdSure](https://www.adsure.in/why-adsure): comparison with Meta's and Google's own suggestions, agencies, YouTube tips, Ads Manager alone and AI chatbots; account safety; what AdSure does and doesn't promise
+- [Pricing](https://www.adsure.in/pricing): monthly and yearly plans, what's included, GST, expert calls, payment and cancelling
+- [FAQ](https://www.adsure.in/faq): short answers to common questions
+
+## Free tools and guides
+
+- [Free ad attention heatmap](https://www.adsure.in/heatmap): see where eyes land first on an ad image or video; free, no sign-up
+- [12-point check before you spend](https://www.adsure.in/guides/ad-checklist): creative, ad text, landing page, tracking, budget, audience, timing and ad rules for Meta and Google ads in India
+- [Indian ad rules in plain words](https://www.adsure.in/guides/indian-ad-rules): ASCI truthful-claims code, influencer labels, health and cure claims, loan ads under RBI rules, real-money gaming and fake urgency
+- [Festival ad calendar 2027 for India](https://www.adsure.in/guides/festival-ad-calendar-2027): festival and sale dates for 2027 with a suggested date to start ads
+
+## Policies
+
+- [Terms of Service](https://www.adsure.in/terms)
+- [Privacy Policy](https://www.adsure.in/privacy)
+- [Refund and Cancellation Policy](https://www.adsure.in/refund-policy)
+
+## Optional
+
+- [Full site text](https://www.adsure.in/llms-full.txt): every public page above as plain text
