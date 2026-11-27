@@ -33,7 +33,10 @@
   "@type": "Organization",
   "name": "AdSure",
   "url": "https://www.adsure.in/",
-  "logo": "https://www.adsure.in/assets/logo-dark.png",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://www.adsure.in/assets/logo-dark.png"
+  },
   "email": "hi@adsure.in",
   "slogan": "Be Sure with Adsure",
   "address": {
@@ -43,8 +46,12 @@
   "legalName": "AdSure",
   "founder": {
    "@type": "Person",
+   "@id": "https://www.adsure.in/#founder",
    "name": "Vyom Gupta",
-   "jobTitle": "Founder"
+   "jobTitle": "Founder",
+   "worksFor": {
+    "@id": "https://www.adsure.in/#organization"
+   }
   },
   "sameAs": [
    "https://www.instagram.com/adsure.in/"
@@ -61,6 +68,26 @@
      "hi"
     ]
    }
+  ],
+  "@id": "https://www.adsure.in/#organization",
+  "description": "AdSure is an Indian company that reviews Meta and Google ads before businesses spend on them. Ad experts and AI check the creative, ad text, landing page and targeting, and give simple fixes.",
+  "image": "https://www.adsure.in/assets/og-image.png?v=2",
+  "areaServed": {
+   "@type": "Country",
+   "name": "India"
+  },
+  "knowsAbout": [
+   "Meta ads",
+   "Facebook ads",
+   "Instagram ads",
+   "Google Ads",
+   "Ad creative review",
+   "Landing page optimisation",
+   "Ad targeting",
+   "Competitor ad research",
+   "ASCI advertising code",
+   "Indian advertising rules",
+   "Festival marketing in India"
   ]
  },
  {
@@ -68,7 +95,12 @@
   "@type": "WebSite",
   "name": "AdSure",
   "url": "https://www.adsure.in/",
-  "inLanguage": "en-IN"
+  "inLanguage": "en-IN",
+  "@id": "https://www.adsure.in/#website",
+  "publisher": {
+   "@id": "https://www.adsure.in/#organization"
+  },
+  "description": "Get your Meta and Google ads reviewed by ad experts and AI before you spend: creative, ad text, landing page and targeting, plus competitor research and the best time to run ads. Made for India."
  },
  {
   "@context": "https://schema.org",
@@ -119,7 +151,49 @@
      "valueAddedTaxIncluded": false
     }
    }
+  ],
+  "@id": "https://www.adsure.in/#app",
+  "provider": {
+   "@id": "https://www.adsure.in/#organization"
+  },
+  "publisher": {
+   "@id": "https://www.adsure.in/#organization"
+  },
+  "image": "https://www.adsure.in/assets/og-image.png?v=2",
+  "screenshot": [
+   "https://www.adsure.in/assets/app/score.webp",
+   "https://www.adsure.in/assets/app/fixes.webp",
+   "https://www.adsure.in/assets/app/setup.webp"
+  ],
+  "audience": {
+   "@type": "BusinessAudience",
+   "name": "Small and growing businesses in India that run Meta and Google ads"
+  },
+  "availableLanguage": [
+   "en",
+   "hi"
   ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.adsure.in/#webpage",
+  "url": "https://www.adsure.in/",
+  "name": "AdSure: Be Sure with Adsure | Get Your Meta & Google Ads Reviewed Before You Spend",
+  "description": "Get your Meta and Google ads reviewed by ad experts and AI before you spend: creative, ad text, landing page and targeting, plus competitor research and the best time to run ads. Made for India.",
+  "inLanguage": "en-IN",
+  "isPartOf": {
+   "@id": "https://www.adsure.in/#website"
+  },
+  "about": {
+   "@id": "https://www.adsure.in/#organization"
+  },
+  "publisher": {
+   "@id": "https://www.adsure.in/#organization"
+  },
+  "mainEntity": {
+   "@id": "https://www.adsure.in/#app"
+  }
  }
 ]
 </script>

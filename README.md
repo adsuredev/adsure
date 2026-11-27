@@ -17,7 +17,12 @@ assets/fonts/       Outfit and DM Sans, served from this site (no Google Fonts),
 terms.html, privacy.html, refund-policy.html   policy pages (styles in assets/legal.css)
 heatmap.html        free ad attention heatmap at /heatmap (no sign-up; runs in the browser, ads are never uploaded)
 assets/heatmap.js   the heatmap model used by heatmap.html
-vercel.json         clean links: /features, /pricing, /terms and so on (no .html)
+vercel.json         clean links: /features, /pricing, /terms and so on (no .html), plus headers
+robots.txt          lets Google, Bing and AI answer engines (ChatGPT, Claude, Perplexity, Gemini) read the site
+sitemap.xml         every public page, with images and the explainer video
+llms.txt            short summary of AdSure for AI assistants (edit by hand)
+llms-full.txt       all page text as plain text for AI assistants (rebuilt by scripts/build-llms-full.py)
+<key>.txt           IndexNow key file (the long hex name); keep it, Bing checks it
 supabase.sql        run once in Supabase to create the sign-up table and live counter
 assets/
   logo-dark.png     black logo (used on cream)
@@ -136,3 +141,20 @@ check the dates once a year and the rules every few months (the gaming law is in
 Set in config.js: PRICE (monthly, ₹2,999), YEARLY_PRICE (₹19,999) and GST_PERCENT (18). The price card, GST totals,
 per-day cost, yearly saving and calculators all update from these. The same numbers are also written in the page text
 and the Terms and Refund pages, so after a price change search all .html files for the old number too.
+
+## AI answer engines (AEO) and search
+
+So ChatGPT, Claude, Perplexity, Gemini and Google's AI answers can find and quote AdSure correctly:
+
+- `robots.txt` allows the AI search crawlers by name and blocks only `/api/` and `/models/`.
+- `llms.txt` is the short, hand-written summary (what AdSure is, price, contact, main pages). Update it when prices or features change.
+- `llms-full.txt` is all page text. After changing page text, run `python3 scripts/build-llms-full.py` (needs `pip install beautifulsoup4`) and commit the new file.
+- Every page has structured data (the `application/ld+json` block in `<head>`). Its parts are linked by `@id`
+  (`https://www.adsure.in/#organization`, `#website`, `#app`), so search engines know the pages, the app and the company are one thing.
+  After a price change, update the prices in these blocks too (index, features, pricing, faq, llms.txt).
+- Table ticks on /why-adsure are written as Yes / Partly / No in the HTML (site.js swaps in the icons), so tools that don't run JavaScript still read them.
+- After a deploy that changes page text, update `<lastmod>` in `sitemap.xml` and run `sh scripts/indexnow.sh` (tells Bing, which ChatGPT search uses).
+
+One-time setup, if not done yet:
+1. Google Search Console: add `https://www.adsure.in`, submit `sitemap.xml`.
+2. Bing Webmaster Tools: import from Search Console, submit `sitemap.xml` (Bing feeds ChatGPT search and Copilot).
